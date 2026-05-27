@@ -1,0 +1,29 @@
+[project]
+name = "fetch-fizz"
+version = "0.1.0"
+description = "DimOS Go2 choreorobotics demo — Shanghai hackathon May 2026"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "dimos[base,unitree,agents,web,perception] @ git+https://github.com/dimensionalOS/dimos.git@b45e5d5816632ab44f9516d4eee12ff2161ce9a8",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.9",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

@@ -1,0 +1,11 @@
+version: v1
+model: gpt-4o
+vision_model: gpt-4o
+temperature: 0.2
+required_tools:
+  - navigate_with_text
+  - stop_navigation
+  - execute_sport_command
+  - speak
+  - demo_status
+  - safe_demo_accent
